@@ -12,10 +12,10 @@ class ShellshockSpider(CrawlSpider):
     start_urls = ['http://%s:%s/' % (x[0], x[1]) for x in domains_to_scan]
 
     rules = (
-        Rule(LinkExtractor(allow=[]), callback='parse_item'),
+        Rule(LinkExtractor(allow=[]), callback='parse_start_url'),
     )
 
-    def parse_item(self, response):
+    def parse_start_url(self, response):
         item = ShellShockItem()
         item['url'] = response.url
         header = response.headers.get('x-shellshock-status')
