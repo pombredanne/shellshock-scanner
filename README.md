@@ -1,4 +1,4 @@
-# shellshock-scanner
+# Shellshock Scanner
 This is a python web crawler that uses `scrapy` to scan pages for the shellshock
 vulerability.
 
