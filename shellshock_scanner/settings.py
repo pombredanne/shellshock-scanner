@@ -1,5 +1,5 @@
 BOT_NAME = 'ShellshockScanner'
-USER_AGENT = 'ShellshockScanner (https://github.com/cdodd/shellshock-scanner)'
+USER_AGENT = 'ShellshockScanner'
 
 SPIDER_MODULES = ['shellshock_scanner.spiders']
 NEWSPIDER_MODULE = 'shellshock_scanner.spiders'
