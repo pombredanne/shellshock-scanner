@@ -1,15 +1,13 @@
 # Shellshock Scanner
-This is a python web crawler that uses `scrapy` to scan pages for the shellshock
-vulerability.
+A python web crawler that uses the [`scrapy`](http://www.secdev.org/projects/scapy/)
+module to scan webpages for the [shellshock vulnerability](http://en.wikipedia.org/wiki/Shellshock_%28software_bug%29).
 
 ## Installation
-```
-sudo pip install scrapy
-git clone https://github.com/cdodd/shellshock-scanner.git
-cd shellshock-scanner
-```
+Before running the scanner you will need to install the `scapy` module. The
+easiest way to do this is using `pip`, with a command such as `sudo pip
+install scapy`. Installation will vary based on your platform/preferences.
 
-### Usage
+## Usage
 Open the file `shellshock_scanner/spiders/shellshock_spider.py` and change
 the `domains_to_scan` list to the domains you want to scan, along with the HTTP
 port numbers:
@@ -19,13 +17,13 @@ domains_to_scan = [
 ]
 ```
 
-Run `scrapy` with the following command:
+Then run `scrapy` with the following command:
 ```
 scrapy crawl shellshock -o output.json
 ```
 
 Any vulnerable URLs will then be printed in red on the terminal, and the status
-of all URLs will be output in json to the `output.json` file...
+of all URLs will be output as json formatted data in the `output.json` file...
 ```
 [{"url": "http://localhost:8080/test.cgi", "vulnerable": true},
 {"url": "http://localhost:8080/test2.cgi", "vulnerable": false}]
