@@ -1,10 +1,14 @@
-from scrapy.contrib.spiders import CrawlSpider, Rule
+# 3rd party modules
 from scrapy.contrib.linkextractors import LinkExtractor
+from scrapy.contrib.spiders import CrawlSpider, Rule
+
+# Local project modules
 from shellshock_scanner.items import ShellShockItem
 
 domains_to_scan = [
     ('localhost', 8080),
 ]
+
 
 class ShellshockSpider(CrawlSpider):
     name = 'shellshock'
