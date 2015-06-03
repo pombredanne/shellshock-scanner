@@ -4,8 +4,9 @@ module to scan webpages for the [shellshock vulnerability](http://en.wikipedia.o
 
 ## Installation
 Before running the scanner you will need to install the `scapy` module. The
-easiest way to do this is using `pip`, with a command such as `sudo pip
-install scapy`. Installation will vary based on your platform/preferences.
+easiest way to do this is using `pip`, with a command such as
+`sudo pip install scapy`. Installation will vary based on your
+platform/preferences.
 
 ## Usage
 Open the file `shellshock_scanner/spiders/shellshock_spider.py` and change
